@@ -27,7 +27,7 @@ function Category({category}) {
         <p style={styleObj} className='caret'>▲</p>
       </div>
 
-                <strong key={category.points} className='elotitle'>ELO: {category.points.map(item => {
+                <strong key={category.points} className='elotitle'>ELO {category.points.map(item => {
                     item[3] > previous ? fontColor = 'green' : fontColor = 'red'
                     previous = item[3]
                     return (

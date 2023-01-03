@@ -3,13 +3,17 @@
 .category {
     background-color: rgb(0, 0, 0, .6);
     padding: 1em;
-    margin: 2em auto;
+    margin: 1em auto;
     border-radius: 15px;
 }
 
 .elo {
-    font-size: 3em;
+    font-size: 2em;
     margin-top: .3em;
+}
+
+.elotitle {
+    display: block;
 }
 
 .date{
@@ -17,4 +21,29 @@
     text-decoration: underline;
 }
 
-h1 {font-size: 2em;}
+strong{
+    margin: 0;
+    line-height: 1em;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+h2 {
+    display: inline;
+}
+.category-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.caret {
+    font-size: 2em;
+    display: block;
+    transition: 1s ease;
+    transform-origin: 0;
+
+}

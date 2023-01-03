@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.logo {
+  width: 25vw;
+}
+
+h1 {
+  font-size: 2em;
+}
+
 
 
 @keyframes logo-spin {
@@ -33,5 +41,28 @@
 input {
   height: 5vh;
   font-size: 1.2em;
+}
+
+@media (min-width: 500px) {
+  .category-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 5vw;
+    column-gap: 5vw;
+    justify-content: space-between;
+  }
+
+  button {
+    width: 20vw;
+    margin: 0 auto;
+  }
+
+  .category {
+    width: 20vw;
+    margin: 0 auto;
+    padding: 0;
+    margin-inline: 0;
+
+  }
 }
 
