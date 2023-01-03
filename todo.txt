@@ -1,0 +1,7 @@
+NEED TO DO:
+
+-- A user should be able to click on a category and hide it / view it ( condensed data )
+
+-- A user should be able to view more information than just elo over time.
+
+-- A user should be able to view a graph of their ELO over time. [may need to find a js library to graph]
