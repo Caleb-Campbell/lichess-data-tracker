@@ -32,16 +32,12 @@ function App() {
     })
   }
 
-  useEffect(() => {
-   
-  })
+  
 
 
   return (
     <div className="App">
-      {
-        navOpen && (<Nav />)
-      }
+      <Nav setNavOpen={setNavOpen}  navOpen={navOpen}/>
       <img className='logo' src={logo} />
       <h1>{input}</h1>
      <form onSubmit={handleSubmit}>

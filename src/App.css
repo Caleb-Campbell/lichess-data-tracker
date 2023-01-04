@@ -39,7 +39,9 @@ h1 {
 }
 
 input {
-  height: 5vh;
+  /* height: 5vh; */
+  padding: 1em;
+  border-radius: 15px;
   font-size: 1.2em;
 }
 
