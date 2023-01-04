@@ -10,7 +10,7 @@
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 
@@ -41,7 +41,7 @@ h1 {
 input {
   /* height: 5vh; */
   padding: 1em;
-  border-radius: 15px;
+  border-radius: 0;
   font-size: 1.2em;
 }
 
