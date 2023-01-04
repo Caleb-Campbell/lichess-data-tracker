@@ -7,22 +7,37 @@ nav {
     width: 8vw;
     height: 100vh;
     background-color: #ffaf5d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: .5s ease;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 .open-nav-button {
     transform: rotate(90deg);
     position: fixed;
     left: 7vw;
+    top: 50%;
     background-color: #ffaf5d;
     padding: .5em;
     padding-top: 0;
     /* border-radius: 10px; */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     cursor: pointer;
     transition: .5s ease;
+}
+
+.navigations {
+    height: 15%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navigations a {
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
 }

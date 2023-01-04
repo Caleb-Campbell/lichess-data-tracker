@@ -1,6 +1,7 @@
 import React from 'react'
 import menu from '../assets/menu.png'
 import '../styles/nav.css'
+import { Link } from 'react-router-dom'
 
 function Nav({navOpen, setNavOpen}) {
 
@@ -28,6 +29,15 @@ function Nav({navOpen, setNavOpen}) {
   return (
     <nav style={navOpen ? openNavStyle : closedNav}>
       <div style={navOpen ? openStyle : closedStyle} onClick={openNav} className='open-nav-button'>▲</div>
+{   navOpen &&
+        <><div className='navigations'>
+          <Link to='/'>Home</Link>
+          <Link to='/elo-history'>ELO History</Link>
+          <a href='https://lichess.org/'>lichess.org</a>
+        </div><div className='credits'>
+            <p>Site by Caleb Campbell</p>
+          </div></>
+}
     </nav>
   )
 }

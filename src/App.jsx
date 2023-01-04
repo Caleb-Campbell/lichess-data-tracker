@@ -1,56 +1,37 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import axios from 'axios'
-import logo from './assets/chessLogo.png'
+import {Routes, Route, json} from 'react-router-dom'
+
 
 import Category from './components/Category'
 import Nav from './components/Nav'
+import Home from './components/Home'
+import History from './components/History'
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false)
   const [input, setInput] = useState('')
   const [chessData, setChessData] = useState([])
-  const [navOpen, setNavOpen] = useState(true)
 
-  const handleInputChange = (e) => {
-    setInput(e.target.value)
-  } 
 
-  const handleSubmit = (e) => {
-    e.preventDefault() 
-    input === '' ? setInput('SopwithCampbell') : setInput(input)
-    getData(input)
-  }
 
-  const getData = (input) => {
-    axios.get(`https://lichess.org/api/user/${input}/rating-history`)
-    .then(res => {
-      setChessData(res.data)
-    })
-    .catch(err => {
-      console.error(err)
-    })
-  }
+
+
+
+
 
   
 
 
   return (
-    <div className="App">
-      <Nav setNavOpen={setNavOpen}  navOpen={navOpen}/>
-      <img className='logo' src={logo} />
-      <h1>{input}</h1>
-     <form onSubmit={handleSubmit}>
-      <label className='label'>Enter your lichess username: <br/>
-        <input placeholder='SopwithCampbell' onChange={handleInputChange} value={input} type='text' />
-      </label>
-      <button type='submit'>Submit</button>
-     </form>
-     <div className='category-list'>
-     {
-       chessData.map(category => (<Category category={category} />))
-      }
-      </div>
+    <div  className="App">
+    <Nav setNavOpen={setNavOpen}  navOpen={navOpen}/>
+
+    <Routes>
+      <Route path='/' element={<Home  navOpen={navOpen} />}/>
+      <Route path='/elo-history' element={<History setChessData={setChessData}  input={input} setInput={setInput} chessData={chessData} />} />
+    </Routes>
     </div>
   )
 }
